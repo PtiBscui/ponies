@@ -1,0 +1,39 @@
+<!-- <ul>
+  {{listPoniesSelected}}
+  <li *ngFor="let p of myPonies">
+    <app-pony-details [pony] = "p" (onSelect)="onSelectParent($event)"></app-pony-details>
+  </li>
+</ul> -->
+
+<p-carousel headerText="Ponies" [value]="myPonies">
+  <ng-template let-pony pTemplate="item">
+    <div class="ui-grid ui-grid-responsive" style="margin: 10px 0px;">
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-12">
+          <img src="assets/img/{{pony.name}}.png" height="60">
+        </div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Number</div>
+        <div class="ui-grid-col-6">{{pony.id_pony}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Name</div>
+        <div class="ui-grid-col-6">{{pony.name}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Age</div>
+        <div class="ui-grid-col-6">{{pony.age}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Weight</div>
+        <div class="ui-grid-col-6">{{pony.weight}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-12">
+          <button type="button" (click)="delete(pony.id_pony)" pButton icon="fa-close"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

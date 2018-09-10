@@ -1,0 +1,61 @@
+<h2>Entrer votre nouveau petit poney</h2>
+<!--<form (ngSubmit)="onSubmit()">
+  <section>
+    <mat-form-field>
+      <input [(ngModel)]="model.name" name="name" matInput placeholder="Name">
+    </mat-form-field>
+  </section>
+
+  <section>
+    <mat-form-field>
+      <input [(ngModel)]="model.weight" name="weight" matInput placeholder="Name">
+    </mat-form-field>
+  </section>
+
+  <section>
+      <mat-form-field>
+        <input [(ngModel)]="model.age" name="age" matInput placeholder="Name">
+      </mat-form-field>
+    </section>
+
+  <button type="submit" class="btn btn-succes">Submit</button>
+</form>-->
+
+<form (ngSubmit)="onSubmit()">
+  <section>
+      <button type="button" (click)="up = !up" pButton icon="fa-edit" style="border: 0; background-color: #ff4081; border-radius: 50%; border-color: white; height: 28px; width:28px;"></button>
+      <br><span class="ui-float-label"  *ngIf="up">
+      <input class="inputPony" id="float-input" type="text" size="30" pInputText [(ngModel)]="model.id_pony" name="id_pony" (change)="update()">
+      <label for="float-input">ID</label>
+    </span>
+  </section>
+  <br>
+
+  <section>
+    <span class="ui-float-label">
+      <input class="inputPony" id="float-input" type="text" size="30" pInputText [(ngModel)]="model.name" name="name" ngDefaultControl>
+      <label for="float-input">Name</label>
+    </span>
+  </section>
+  <br>
+
+  <section>
+    <span class="ui-float-label">
+      <input class="inputPony" id="float-input" type="text" size="30" pInputText [(ngModel)]="model.age" name="age" ngDefaultControl>
+      <label for="float-input">Age</label>
+    </span>
+  </section>
+  <br>
+
+  <section>
+    <span class="ui-float-label">
+      <input class="inputPony" id="float-input" type="text" size="30" pInputText [(ngModel)]="model.weight" name="weight" ngDefaultControl>
+      <label for="float-input">Weight</label>
+    </span>
+  </section>
+  <br>
+
+  <button type="submit" style="border: 0; background-color: #ff4081; border-radius: 50%; border-color: white; height: 56px; width:56px;">
+    <i style="font-size: 25px; color: white" class="fa fa-heart"></i>
+  </button>
+</form>

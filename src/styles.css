@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/primeng/resources/themes/omega/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+
+body{
+    margin:0;
+}
+
+.ui-calendar.ui-calendar-w-btn input, .ui-inputtext, .inputPony{
+    border-radius: 10px !important;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    margin-top: 0.25em;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff4081;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';

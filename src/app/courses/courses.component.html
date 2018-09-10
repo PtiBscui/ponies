@@ -1,0 +1,47 @@
+<!-- <ul>
+  <li>ID | Date | Lieu | Participants</li>
+  <li *ngFor="let c of myCourses">{{c.id_course}} | {{c.date | date:'dd-MM-yyyy'}} | {{c.lieu}} |
+    <ul>
+      <li *ngFor="let c of c.ponies">
+        {{c.name}}
+      </li>
+    </ul>
+  </li>
+</ul> -->
+
+<p-carousel headerText="Courses" [value]="myCourses">
+  <ng-template let-course pTemplate="item">
+    <div class="ui-grid ui-grid-responsive" style="position: relative; margin: 10px 0px; height: 264px">
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-12">
+          <img src="assets/img/course.jpg" height="60">
+        </div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Number</div>
+        <div class="ui-grid-col-6">{{course.id_course}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Date</div>
+        <div class="ui-grid-col-6">{{course.date | date:'dd-MM-yyyy'}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Place</div>
+        <div class="ui-grid-col-6">{{course.lieu}}</div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-6">Ponies</div>
+        <div class="ui-grid-col-6">
+          <span *ngFor="let c of course.ponies">
+            {{c.name}}<br>
+          </span>
+        </div>
+      </div>
+      <div class="ui-grid-row" style="text-align : center;">
+        <div class="ui-grid-col-12">
+          <button type="button" (click)="delete(course.id_course)" pButton icon="fa-close"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

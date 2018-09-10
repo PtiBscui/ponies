@@ -1,0 +1,24 @@
+<!-- <nav>
+  <a routerLink="/Ponies">Liste des poneys</a>
+  <a routerLink="/Pony">Ajouter un poney</a>
+  <a routerLink="/Courses">Liste des courses</a>
+  <a routerLink="/Course">Ajouter une course</a>
+</nav> -->
+<h1>{{title}}</h1>
+<div class="pos-f-t" >
+  <nav class="links navbar navbar-light bg-light" style="height: 70px; width:75px;">
+    <button class="navbar-toggler col-lg-12" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+      <div class="collapse  col-lg-12" id="navbarToggleExternalContent" style="width: 230px; padding: 0px;">
+        <div class="links bg-light p-4 ">
+          <li><a style="padding:0" class= "col-lg-12" routerLink="/Ponies" >Liste des poneys</a></li>
+          <li><a style="padding:0" class= "col-lg-12" routerLink="/Pony">Ajouter un poney</a></li>
+          <li><a style="padding:0" class= "col-lg-12" routerLink="/Courses">Liste des courses</a></li>
+          <li><a style="padding:0" class= "col-lg-12" routerLink="/Course">Ajouter une course</a></li>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
